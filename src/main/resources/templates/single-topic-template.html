@@ -31,6 +31,16 @@
                 </div>
             </nav>
         </section>
+
+        <form th:action="'/posts/' +${topic.id} +'/addnewpost'" th:object ="${newPost}" method="POST">
+            <textarea name="title" id="submitPostTitleArea" cols="20" rows="2" placeholder="Post title!"></textarea>
+            <textarea name="author" id="submitPostNameArea" cols="20" rows="2" placeholder="Who is writing?"></textarea>
+            <textarea name="content" id="submitPostTextArea" cols="50" rows="10" placeholder="Write your post here!"></textarea>
+            <input type="submit" name="SEND" id="submitPostInput">
+
+        </form>
+
+
     </main>
 </div>
 </body>

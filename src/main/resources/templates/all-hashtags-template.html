@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Hashtags</title>
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+        <h1 class="header__title">Surviving Coding Boot Camp</h1>
+        <nav class="header__nav">
+            <div class="header__nav-item"><a href="/" class="header__nav-link">Home</a></div>
+            <div class="header__nav-item"><a href="/hashtags" class="header__nav-link">Hashtags</a></div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section class="main-content__post post">
+            <ul>
+                <li th:each = "currentHashtag:${hashtags}">
+                    <a th:href="'/hashtag/' + ${currentHashtag.id}" class=""
+                       th:text="${currentHashtag.Hashtag}">
+
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
